@@ -12,13 +12,11 @@ const Modal: React.FC<ModalProps> = React.memo(({ isOpen, onClose, children }) =
 
   const handleClose = useCallback(() => {
     console.log('Modal close button clicked!');
-    if (!isAnimating) {
-      console.log('Calling onClose function');
-      onClose();
-    } else {
-      console.log('Modal is animating, cannot close yet');
-    }
-  }, [isAnimating, onClose]);
+    // Reset animation state and close immediately
+    setIsAnimating(false);
+    console.log('Calling onClose function');
+    onClose();
+  }, [onClose]);
 
   useEffect(() => {
     if (isOpen) {
@@ -44,6 +42,7 @@ const Modal: React.FC<ModalProps> = React.memo(({ isOpen, onClose, children }) =
         }`}
         onClick={() => {
           console.log('Backdrop clicked!');
+          setIsAnimating(false);
           handleClose();
         }}
       ></div>
