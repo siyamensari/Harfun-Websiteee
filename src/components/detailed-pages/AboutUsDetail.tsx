@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 
 interface AboutUsDetailProps {
   onClose: () => void;
@@ -167,8 +167,8 @@ const AboutUsDetail: React.FC<AboutUsDetailProps> = ({ onClose }) => {
 
       
       {/* Header */}
-      <div className={`text-center mb-12 transition-all duration-700 transform ${
-        isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+      <div className={`text-center mb-12 transition-all duration-500 transform ${
+        isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
       }`}>
         <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
           About Harfun Studio
@@ -179,9 +179,9 @@ const AboutUsDetail: React.FC<AboutUsDetailProps> = ({ onClose }) => {
       </div>
 
       {/* Mission Statement */}
-      <div className={`bg-white/10 backdrop-blur-md rounded-3xl p-12 max-w-4xl mx-auto mb-16 transition-all duration-700 transform ${
-        isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-      }`} style={{ transitionDelay: '200ms' }}>
+      <div className={`bg-white/10 backdrop-blur-md rounded-3xl p-12 max-w-4xl mx-auto mb-16 transition-all duration-500 transform ${
+        isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+      }`}>
         <h2 className="text-3xl font-bold text-white mb-6 text-center">Our Mission</h2>
         <p className="text-xl text-white/90 leading-relaxed mb-6 text-center">
           "To create an inclusive artistic sanctuary where creativity knows no boundaries, where every individual can discover their unique artistic voice, and where the transformative power of art enriches lives and builds lasting connections."
@@ -190,9 +190,9 @@ const AboutUsDetail: React.FC<AboutUsDetailProps> = ({ onClose }) => {
       </div>
 
       {/* Timeline */}
-      <div className={`mb-16 transition-all duration-700 transform ${
-        isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-      }`} style={{ transitionDelay: '400ms' }}>
+      <div className={`mb-16 transition-all duration-500 transform ${
+        isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+      }`}>
         <h2 className="text-3xl font-bold text-white text-center mb-12">Our Journey</h2>
         <div className="space-y-8">
           {timeline.map((milestone, index) => (
@@ -215,9 +215,9 @@ const AboutUsDetail: React.FC<AboutUsDetailProps> = ({ onClose }) => {
       </div>
 
       {/* Values */}
-      <div className={`mb-16 transition-all duration-700 transform ${
-        isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-      }`} style={{ transitionDelay: '600ms' }}>
+      <div className={`mb-16 transition-all duration-500 transform ${
+        isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+      }`}>
         <h2 className="text-3xl font-bold text-white text-center mb-12">Our Values</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {values.map((value, index) => (
@@ -240,9 +240,9 @@ const AboutUsDetail: React.FC<AboutUsDetailProps> = ({ onClose }) => {
       </div>
 
       {/* Team */}
-      <div className={`mb-16 transition-all duration-700 transform ${
-        isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-      }`} style={{ transitionDelay: '800ms' }}>
+      <div className={`mb-16 transition-all duration-500 transform ${
+        isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+      }`}>
         <h2 className="text-3xl font-bold text-white text-center mb-12">Meet Our Team</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {team.map((member, index) => (
@@ -270,9 +270,9 @@ const AboutUsDetail: React.FC<AboutUsDetailProps> = ({ onClose }) => {
       </div>
 
       {/* Gallery */}
-      <div className={`mb-16 transition-all duration-700 transform ${
-        isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-      }`} style={{ transitionDelay: '1000ms' }}>
+      <div className={`mb-16 transition-all duration-500 transform ${
+        isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+      }`}>
         <h2 className="text-3xl font-bold text-white text-center mb-12">Studio Gallery</h2>
         <p className="text-white/80 text-center mb-8 max-w-2xl mx-auto">
           Take a peek into our creative space and see the magic that happens at Harfun Studio
@@ -302,8 +302,11 @@ const AboutUsDetail: React.FC<AboutUsDetailProps> = ({ onClose }) => {
               '/gallery/_MG_7183.jpg'
             ];
             
-            // Shuffle array to display images in random order
-            const shuffledImages = [...galleryImages].sort(() => Math.random() - 0.5);
+            // Memoize shuffled array to prevent re-shuffling on every render
+            const shuffledImages = useMemo(() => 
+              [...galleryImages].sort(() => Math.random() - 0.5), 
+              []
+            );
             
             // Show 9 images initially, all 19 when expanded
             const imagesToShow = showFullGallery ? shuffledImages : shuffledImages.slice(0, 9);
@@ -318,6 +321,7 @@ const AboutUsDetail: React.FC<AboutUsDetailProps> = ({ onClose }) => {
                   <img
                     src={image}
                     alt={`Studio Gallery Image ${index + 1}`}
+                    loading="lazy"
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
@@ -343,9 +347,9 @@ const AboutUsDetail: React.FC<AboutUsDetailProps> = ({ onClose }) => {
       </div>
 
       {/* Stats */}
-      <div className={`mb-16 transition-all duration-700 transform ${
-        isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-      }`} style={{ transitionDelay: '1200ms' }}>
+      <div className={`mb-16 transition-all duration-500 transform ${
+        isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+      }`}>
         <h2 className="text-3xl font-bold text-white text-center mb-12">Our Impact</h2>
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
           {stats.map((stat, index) => (
@@ -360,9 +364,9 @@ const AboutUsDetail: React.FC<AboutUsDetailProps> = ({ onClose }) => {
 
 
       {/* Contact Information */}
-      <div className={`text-center transition-all duration-700 transform ${
-        isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-      }`} style={{ transitionDelay: '1400ms' }}>
+      <div className={`text-center transition-all duration-500 transform ${
+        isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+      }`}>
         <div className="bg-white/10 backdrop-blur-md rounded-3xl p-8 max-w-2xl mx-auto">
           <h3 className="text-2xl font-bold text-white mb-4">Get in Touch</h3>
           <p className="text-white/80 mb-6">

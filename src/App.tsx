@@ -105,7 +105,7 @@ function App() {
     <div className="min-h-screen transition-all duration-1000 ease-in-out" style={backgroundStyle}>
       {/* Scroll Progress Bar */}
       <div className="fixed top-0 left-0 right-0 z-50 h-1 bg-white/20">
-        <div
+        <div 
           className="h-full transition-all duration-300"
           style={{
             width: `${(scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100}%`,
@@ -113,9 +113,9 @@ function App() {
           }}
         ></div>
       </div>
-
+      
       <Header />
-
+      
       <main>
         {/* Hero Section */}
         <section id="home" className="pt-16">
@@ -273,10 +273,10 @@ function App() {
               Workshops
             </h2>
             <p className="text-xl text-white/80 max-w-3xl mx-auto leading-relaxed mb-12">
-              Discover your artistic potential through our diverse range of workshops.
+              Discover your artistic potential through our diverse range of workshops. 
               From traditional crafts to modern techniques, we offer something for every creative soul.
             </p>
-
+            
             {/* Popular Workshops Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
               {popularWorkshops.map((workshop, index) => (
@@ -284,35 +284,36 @@ function App() {
                   key={index}
                   className="group bg-gradient-to-br from-white/20 via-white/10 to-white/5 backdrop-blur-md rounded-2xl overflow-hidden hover:from-white/30 hover:via-white/20 hover:to-white/10 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl border border-white/20"
                 >
-                  <div className="relative overflow-hidden">
-                    <img
-                      src={workshop.image}
-                      alt={workshop.title}
-                      className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
-                  </div>
-                  <div className="p-6">
-                    <h4 className="text-xl font-bold text-white mb-3">
-                      {workshop.title}
-                    </h4>
-                    <p className="text-white/80 mb-4 leading-relaxed">
-                      {workshop.description}
-                    </p>
-                    <div className="flex items-center justify-between">
+                    <div className="relative overflow-hidden">
+                      <img
+                        src={workshop.image}
+                        alt={workshop.title}
+                        loading="lazy"
+                        className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                    </div>
+                    <div className="p-6">
+                      <h4 className="text-xl font-bold text-white mb-3">
+                        {workshop.title}
+                      </h4>
+                      <p className="text-white/80 mb-4 leading-relaxed">
+                        {workshop.description}
+                      </p>
+                      <div className="flex items-center justify-between">
                       <div className="flex items-center text-white">
-                        <svg className="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                        </svg>
-                        <span className="text-sm">{workshop.duration}</span>
-                      </div>
-                      <span className="bg-white/20 text-white text-xs px-3 py-1 rounded-full">
+                          <svg className="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                          </svg>
+                          <span className="text-sm">{workshop.duration}</span>
+                        </div>
+                        <span className="bg-white/20 text-white text-xs px-3 py-1 rounded-full">
                         {workshop.level}
-                      </span>
+                        </span>
+                      </div>
                     </div>
                   </div>
-                </div>
-              ))}
+                ))}
             </div>
 
             {/* See More Button */}
@@ -324,8 +325,8 @@ function App() {
               >
                 See More
               </button>
-            </div>
-          </div>
+                      </div>
+                  </div>
         </section>
 
 
@@ -337,11 +338,11 @@ function App() {
               Commissions
             </h2>
             <p className="text-xl text-white/80 max-w-3xl mx-auto leading-relaxed mb-12">
-              Transform your space with bespoke artwork created specifically for you.
-              From intimate residential pieces to large-scale commercial installations,
+              Transform your space with bespoke artwork created specifically for you. 
+              From intimate residential pieces to large-scale commercial installations, 
               we bring your vision to life.
             </p>
-
+            
             {/* Commission Categories */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
               {[
@@ -410,10 +411,10 @@ function App() {
               Handcrafted Products
             </h2>
             <p className="text-xl text-white/80 max-w-3xl mx-auto leading-relaxed mb-12">
-              Discover unique, handmade products created with love by our talented artisans.
+              Discover unique, handmade products created with love by our talented artisans. 
               Each piece tells a story and brings artistic beauty into your everyday life.
             </p>
-
+            
             {/* Product Categories */}
             <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12">
               {[
@@ -457,7 +458,7 @@ function App() {
             </div>
 
             {/* See More Button */}
-            <div className="text-center">
+                    <div className="text-center">
               <button
                 onClick={() => setShowProductsDetail(true)}
                 className="text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:scale-105 shadow-lg transform hover:-translate-y-1"
@@ -485,7 +486,7 @@ function App() {
               Internship Program
             </h2>
             <p className="text-xl text-white/80 max-w-3xl mx-auto leading-relaxed mb-12">
-              Join our supportive community and learn from professional artists while
+              Join our supportive community and learn from professional artists while 
               working on real projects and developing your unique creative voice.
             </p>
 
@@ -494,41 +495,41 @@ function App() {
               {[
                 {
                   icon: <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" /></svg>,
-                  title: 'Hands-On Experience',
-                  description: 'Work directly with professional artists on real projects and commissions.',
-                  color: 'from-yellow-500 to-orange-500',
-                },
-                {
+                    title: 'Hands-On Experience',
+                    description: 'Work directly with professional artists on real projects and commissions.',
+                    color: 'from-yellow-500 to-orange-500',
+                  },
+                  {
                   icon: <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197m13.5-9a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0z" /></svg>,
-                  title: 'Mentorship',
-                  description: 'Receive guidance from experienced artists and industry professionals.',
-                  color: 'from-blue-500 to-indigo-500',
-                },
-                {
+                    title: 'Mentorship',
+                    description: 'Receive guidance from experienced artists and industry professionals.',
+                    color: 'from-blue-500 to-indigo-500',
+                  },
+                  {
                   icon: <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" /></svg>,
-                  title: 'Portfolio Development',
-                  description: 'Build a strong portfolio with diverse artworks and techniques.',
-                  color: 'from-green-500 to-teal-500',
-                },
-                {
+                    title: 'Portfolio Development',
+                    description: 'Build a strong portfolio with diverse artworks and techniques.',
+                    color: 'from-green-500 to-teal-500',
+                  },
+                  {
                   icon: <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" /></svg>,
-                  title: 'Creative Community',
-                  description: 'Join a supportive network of artists and creative professionals.',
-                  color: 'from-pink-500 to-red-500',
-                },
-              ].map((benefit, index) => (
-                <div key={index} className="text-center group">
+                    title: 'Creative Community',
+                    description: 'Join a supportive network of artists and creative professionals.',
+                    color: 'from-pink-500 to-red-500',
+                  },
+                ].map((benefit, index) => (
+                  <div key={index} className="text-center group">
                   <div className="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-white/30 via-white/20 to-white/10 backdrop-blur-md rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-xl text-white border border-white/20 group-hover:from-white/40 group-hover:via-white/30 group-hover:to-white/20">
                     {benefit.icon}
+                    </div>
+                    <h3 className="text-xl font-bold text-white mb-4">
+                      {benefit.title}
+                    </h3>
+                    <p className="text-white/70 leading-relaxed">
+                      {benefit.description}
+                    </p>
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-4">
-                    {benefit.title}
-                  </h3>
-                  <p className="text-white/70 leading-relaxed">
-                    {benefit.description}
-                  </p>
-                </div>
-              ))}
+                ))}
             </div>
 
             {/* See More Button */}
@@ -540,8 +541,8 @@ function App() {
               >
                 See More
               </button>
-            </div>
-          </div>
+                        </div>
+                    </div>
         </section>
 
 
@@ -584,14 +585,14 @@ function App() {
                 <div key={index} className="text-center">
                   <div className="text-4xl font-bold text-white mb-2 bg-gradient-to-br from-white/30 via-white/20 to-white/10 backdrop-blur-md rounded-2xl p-4 border border-white/20">{stat.number}</div>
                   <div className="text-white/70">{stat.label}</div>
-                </div>
-              ))}
+                  </div>
+                ))}
             </div>
 
 
 
             {/* See More Button */}
-            <div className="text-center">
+                <div className="text-center">
               <button
                 onClick={() => setShowAboutUsDetail(true)}
                 className="text-white px-8 py-4 rounded-full font-semibold transition-all duration-300 hover:scale-105 shadow-lg transform hover:-translate-y-1"
@@ -683,9 +684,9 @@ function App() {
                         {method.primary}
                       </a>
                     ) : (
-                      <p className="text-xl text-white font-semibold mb-2">
-                        {method.primary}
-                      </p>
+                    <p className="text-xl text-white font-semibold mb-2">
+                      {method.primary}
+                    </p>
                     )}
                     <p className="text-white/70 mb-4">
                       {method.secondary}

@@ -109,7 +109,8 @@ const ProductsDetail: React.FC<ProductsDetailProps> = ({ onClose }) => {
               <img
                 src={product.image}
                 alt={product.title}
-                className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"
+                loading="lazy"
+                className="w-full h-48 object-cover rounded-t-2xl group-hover:scale-110 transition-transform duration-500"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
 

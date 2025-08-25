@@ -328,8 +328,8 @@ const WorkshopsDetail: React.FC<WorkshopsDetailProps> = ({ onClose }) => {
   return (
     <div className="text-white">
       {/* Header */}
-      <div className={`text-center mb-12 transition-all duration-700 transform ${
-        isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+      <div className={`text-center mb-12 transition-all duration-500 transform ${
+        isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
       }`}>
         <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
           All Creative Workshops
@@ -341,17 +341,16 @@ const WorkshopsDetail: React.FC<WorkshopsDetailProps> = ({ onClose }) => {
 
       {/* Workshop Types */}
       <div className="mb-16">
-        <h2 className={`text-3xl font-bold text-white mb-8 text-center transition-all duration-700 transform ${
-          isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-        }`} style={{ transitionDelay: '200ms' }}>Workshop Types</h2>
+        <h2 className={`text-3xl font-bold text-white mb-8 text-center transition-all duration-500 transform ${
+          isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+        }`}>Workshop Types</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {workshopTypes.map((type, index) => (
             <div
               key={index}
-              className={`bg-gradient-to-br from-blue-500/40 via-purple-500/40 to-pink-500/40 backdrop-blur-md rounded-2xl p-6 text-white hover:scale-105 transition-all duration-700 transform shadow-xl border border-white/20 hover:from-blue-500/50 hover:via-purple-500/50 hover:to-pink-500/50 ${
-                isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
+              className={`bg-gradient-to-br from-blue-500/40 via-purple-500/40 to-pink-500/40 backdrop-blur-md rounded-2xl p-6 text-white hover:scale-105 transition-all duration-500 transform shadow-xl border border-white/20 hover:from-blue-500/50 hover:via-purple-500/50 hover:to-pink-500/50 ${
+                isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
               }`}
-              style={{ transitionDelay: `${400 + index * 100}ms` }}
             >
                               <div className="text-4xl mb-4 text-center bg-gradient-to-br from-blue-500/60 to-purple-500/60 backdrop-blur-md rounded-full w-16 h-16 mx-auto flex items-center justify-center border border-white/20">{type.icon}</div>
               <h3 className="text-xl font-bold mb-3 text-center">{type.title}</h3>
@@ -372,9 +371,9 @@ const WorkshopsDetail: React.FC<WorkshopsDetailProps> = ({ onClose }) => {
 
 
       {/* Workshops Grid */}
-      <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 transition-all duration-700 transform ${
-        isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-      }`} style={{ transitionDelay: '800ms' }}>
+      <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 transition-all duration-500 transform ${
+        isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+      }`}>
         {allWorkshops.map((workshop, index) => (
           <div
             key={index}
@@ -384,6 +383,7 @@ const WorkshopsDetail: React.FC<WorkshopsDetailProps> = ({ onClose }) => {
               <img
                 src={workshop.image}
                 alt={workshop.title}
+                loading="lazy"
                 className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
@@ -413,9 +413,9 @@ const WorkshopsDetail: React.FC<WorkshopsDetailProps> = ({ onClose }) => {
       </div>
 
       {/* Booking Information */}
-      <div className={`mt-16 text-center transition-all duration-700 transform ${
-        isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-      }`} style={{ transitionDelay: '1000ms' }}>
+      <div className={`mt-16 text-center transition-all duration-500 transform ${
+        isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+      }`}>
         <div className="bg-white/10 backdrop-blur-md rounded-3xl p-8 max-w-2xl mx-auto">
           <h3 className="text-2xl font-bold text-white mb-4">Ready to Join a Workshop?</h3>
           <p className="text-white/80 mb-6">
