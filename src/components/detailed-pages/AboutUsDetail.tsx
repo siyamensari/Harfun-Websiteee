@@ -4,9 +4,10 @@ interface AboutUsDetailProps {
   onClose: () => void;
 }
 
-const AboutUsDetail: React.FC<AboutUsDetailProps> = ({ onClose }) => {
-  const [showFullGallery, setShowFullGallery] = useState(false);
+const AboutUsDetail: React.FC<AboutUsDetailProps> = React.memo(({ onClose }) => {
   const [isVisible, setIsVisible] = useState(false);
+  const [showFullGallery, setShowFullGallery] = useState(false);
+  const [visibleGalleryCount, setVisibleGalleryCount] = useState(9); // Show only 9 initially
 
   useEffect(() => {
     setIsVisible(true);
@@ -132,7 +133,8 @@ const AboutUsDetail: React.FC<AboutUsDetailProps> = ({ onClose }) => {
     }
   ];
 
-  const team = [
+  // Memoize team data to prevent re-renders
+  const team = useMemo(() => [
     {
       name: 'Abdullah Javed',
       role: 'Co-CEO & Sculptor',
@@ -151,16 +153,17 @@ const AboutUsDetail: React.FC<AboutUsDetailProps> = ({ onClose }) => {
       description: 'Creative coordinator who brings workshops to life and manages our vibrant community. Expert in textile arts and workshop coordination.',
       image: '/assets/sana.webp'
     }
-  ];
+  ], []);
 
-  const stats = [
+  // Memoize stats data
+  const stats = useMemo(() => [
     { number: '500+', label: 'Conducted Workshops' },
     { number: '50+', label: 'Commission Projects' },
     { number: '1000+', label: 'Artworks Created' },
     { number: '4+', label: 'Years of Creativity' },
     { number: '500+', label: 'Happy Participants' },
     { number: '25+', label: 'Art Forms Taught' }
-  ];
+  ], []);
 
   return (
     <div className="text-white">
@@ -308,12 +311,12 @@ const AboutUsDetail: React.FC<AboutUsDetailProps> = ({ onClose }) => {
               []
             );
             
-            // Show 9 images initially, all 19 when expanded
-            const imagesToShow = showFullGallery ? shuffledImages : shuffledImages.slice(0, 9);
+            // Show images based on visible count
+            const imagesToShow = shuffledImages.slice(0, visibleGalleryCount);
             
             return imagesToShow.map((image, index) => (
               <div 
-                key={index} 
+                key={image} // Use image path as key for better React optimization
                 className="group relative overflow-hidden rounded-xl bg-white/5 hover:bg-white/10 transition-colors duration-200"
               >
                 <div className="relative aspect-square overflow-hidden">
@@ -330,13 +333,23 @@ const AboutUsDetail: React.FC<AboutUsDetailProps> = ({ onClose }) => {
           })()}
         </div>
         <div className="text-center mt-8">
-          <button 
-            onClick={() => setShowFullGallery(!showFullGallery)}
-            className="text-white px-6 py-3 rounded-full font-semibold transition-all duration-300 hover:scale-105 shadow-lg transform hover:-translate-y-1"
-            style={{ background: 'linear-gradient(to right, #e62e25, #fcb415)' }}
-          >
-            {showFullGallery ? 'Show Less' : 'View Full Gallery'}
-          </button>
+          {visibleGalleryCount < 19 ? (
+            <button 
+              onClick={() => setVisibleGalleryCount(prev => Math.min(prev + 9, 19))}
+              className="text-white px-6 py-3 rounded-full font-semibold transition-all duration-300 hover:scale-105 shadow-lg transform hover:-translate-y-1"
+              style={{ background: 'linear-gradient(to right, #e62e25, #fcb415)' }}
+            >
+              Load More Images ({visibleGalleryCount} of 19)
+            </button>
+          ) : (
+            <button 
+              onClick={() => setVisibleGalleryCount(9)}
+              className="text-white px-6 py-3 rounded-full font-semibold transition-all duration-300 hover:scale-105 shadow-lg transform hover:-translate-y-1"
+              style={{ background: 'linear-gradient(to right, #e62e25, #fcb415)' }}
+            >
+              Show Less
+            </button>
+          )}
         </div>
       </div>
 
@@ -375,6 +388,6 @@ const AboutUsDetail: React.FC<AboutUsDetailProps> = ({ onClose }) => {
       </div>
     </div>
   );
-};
+});
 
 export default AboutUsDetail;

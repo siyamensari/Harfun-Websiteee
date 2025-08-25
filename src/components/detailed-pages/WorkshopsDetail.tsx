@@ -1,17 +1,19 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo, useCallback } from 'react';
 
 interface WorkshopsDetailProps {
   onClose: () => void;
 }
 
-const WorkshopsDetail: React.FC<WorkshopsDetailProps> = ({ onClose }) => {
+const WorkshopsDetail: React.FC<WorkshopsDetailProps> = React.memo(({ onClose }) => {
   const [isVisible, setIsVisible] = useState(false);
+  const [visibleCount, setVisibleCount] = useState(12); // Show only 12 initially
 
   useEffect(() => {
     setIsVisible(true);
   }, []);
 
-  const workshopTypes = [
+  // Memoize workshop types to prevent re-renders
+  const workshopTypes = useMemo(() => [
     {
       title: 'Public Workshops',
       description: 'Open to everyone, these workshops are perfect for individuals looking to explore their creativity.',
@@ -20,7 +22,6 @@ const WorkshopsDetail: React.FC<WorkshopsDetailProps> = ({ onClose }) => {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197m13.5-9a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0z" />
         </svg>
       ),
-      color: 'from-blue-500 to-indigo-500',
       features: ['Open enrollment', 'Flexible scheduling', 'Individual attention', 'Group learning']
     },
     {
@@ -31,7 +32,6 @@ const WorkshopsDetail: React.FC<WorkshopsDetailProps> = ({ onClose }) => {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
         </svg>
       ),
-      color: 'from-purple-500 to-pink-500',
       features: ['Personalized curriculum', 'Flexible timing', 'One-on-one instruction', 'Custom projects']
     },
     {
@@ -42,7 +42,6 @@ const WorkshopsDetail: React.FC<WorkshopsDetailProps> = ({ onClose }) => {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
         </svg>
       ),
-      color: 'from-green-500 to-teal-500',
       features: ['Team building', 'Corporate events', 'Innovation focus', 'Professional development']
     },
     {
@@ -53,12 +52,12 @@ const WorkshopsDetail: React.FC<WorkshopsDetailProps> = ({ onClose }) => {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
         </svg>
       ),
-      color: 'from-orange-500 to-red-500',
       features: ['Scenic locations', 'Travel experience', 'Cultural immersion', 'Unique settings']
     }
-  ];
+  ], []);
 
-  const allWorkshops = [
+  // Memoize workshops data to prevent re-creation
+  const allWorkshops = useMemo(() => [
     {
       title: 'Create with Clay',
       description: 'Shape your imagination with our hands-on sculpting & pottery sessions.',
@@ -321,7 +320,7 @@ const WorkshopsDetail: React.FC<WorkshopsDetailProps> = ({ onClose }) => {
       type: 'Public'
     },
 
-  ];
+  ], []);
 
 
 
@@ -371,12 +370,12 @@ const WorkshopsDetail: React.FC<WorkshopsDetailProps> = ({ onClose }) => {
 
 
       {/* Workshops Grid */}
-      <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 transition-all duration-500 transform ${
+      <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 transition-all duration-500 transform ${
         isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
       }`}>
-        {allWorkshops.map((workshop, index) => (
+        {allWorkshops.slice(0, visibleCount).map((workshop, index) => (
           <div
-            key={index}
+            key={workshop.title} // Use title as key for better React optimization
             className="group bg-white/5 rounded-xl overflow-hidden hover:bg-white/10 transition-colors duration-200"
           >
             <div className="relative overflow-hidden">
@@ -411,6 +410,18 @@ const WorkshopsDetail: React.FC<WorkshopsDetailProps> = ({ onClose }) => {
         ))}
       </div>
 
+      {/* Load More Button */}
+      {visibleCount < allWorkshops.length && (
+        <div className="text-center mt-8">
+          <button
+            onClick={() => setVisibleCount(prev => Math.min(prev + 12, allWorkshops.length))}
+            className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-3 rounded-full font-semibold hover:shadow-lg transition-all duration-200 hover:scale-105"
+          >
+            Load More Workshops ({visibleCount} of {allWorkshops.length})
+          </button>
+        </div>
+      )}
+
       {/* Booking Information */}
       <div className={`mt-16 text-center transition-all duration-500 transform ${
         isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
@@ -429,6 +440,6 @@ const WorkshopsDetail: React.FC<WorkshopsDetailProps> = ({ onClose }) => {
       </div>
     </div>
   );
-};
+});
 
 export default WorkshopsDetail;

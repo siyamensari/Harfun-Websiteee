@@ -1,17 +1,12 @@
-import React, { useState, useEffect } from 'react';
+import React, { useMemo } from 'react';
 
 interface ProductsDetailProps {
   onClose: () => void;
 }
 
-const ProductsDetail: React.FC<ProductsDetailProps> = ({ onClose }) => {
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    setIsVisible(true);
-  }, []);
-
-  const allProducts = [
+const ProductsDetail: React.FC<ProductsDetailProps> = React.memo(({ onClose }) => {
+  // Memoize products data to prevent re-creation
+  const products = useMemo(() => [
     {
       title: 'Handcrafted Candles',
       description: 'Beautiful, aromatic candles made with natural waxes and essential oils. Perfect for creating a cozy atmosphere.',
@@ -76,31 +71,24 @@ const ProductsDetail: React.FC<ProductsDetailProps> = ({ onClose }) => {
       image: '/assets/decoupage.webp',
       features: ['Recycled paper', 'Handmade', 'Eco-friendly', 'Affordable']
     }
-  ];
-
+  ], []);
 
 
   return (
     <div className="text-white">
       {/* Header */}
-      <div className={`text-center mb-12 transition-all duration-700 transform ${
-        isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-      }`}>
+      <div className="text-center mb-12">
         <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
-          Handcrafted Products
+          Our Artisan Products
         </h1>
         <p className="text-xl text-white/80 max-w-3xl mx-auto leading-relaxed">
-          Discover unique, handmade products created with love by our talented artisans. Each piece tells a story and brings artistic beauty into your everyday life.
+          Discover unique, handcrafted pieces created with passion and skill by our talented artists
         </p>
       </div>
 
-
-
       {/* Products Grid */}
-      <div className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 transition-all duration-700 transform ${
-        isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'
-      }`} style={{ transitionDelay: '300ms' }}>
-        {allProducts.map((product, index) => (
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {products.map((product, index) => (
           <div
             key={index}
             className="group bg-white/5 rounded-xl overflow-hidden hover:bg-white/10 transition-colors duration-200 shadow-lg"
@@ -178,6 +166,6 @@ const ProductsDetail: React.FC<ProductsDetailProps> = ({ onClose }) => {
       </div>
     </div>
   );
-};
+});
 
 export default ProductsDetail;
