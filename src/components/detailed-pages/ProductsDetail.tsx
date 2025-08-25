@@ -65,7 +65,7 @@ const ProductsDetail: React.FC<ProductsDetailProps> = ({ onClose }) => {
       description: 'Beautiful stained glass pieces, fused glass art, and decorative glass items. Each piece catches light beautifully.',
       price: 'Rs. 3,000 - 6,000',
       category: 'Home Decor',
-      image: '/assets/stained-glass-art.webp',
+      image: '/assets/crafted-with-passion.webp',
       features: ['Hand-cut glass', 'Vibrant colors', 'Light effects', 'Fragile beauty']
     },
     {

@@ -82,7 +82,7 @@ const WorkshopsDetail: React.FC<WorkshopsDetailProps> = ({ onClose }) => {
       description: 'Discover the ancient art of stained glass with modern techniques.',
       duration: '4 hours',
       level: 'Intermediate',
-      image: '/assets/stained-glass-art.webp',
+      image: '/assets/crafted-with-passion.webp',
       category: 'Glass Art',
       type: 'Public'
     },
@@ -199,7 +199,7 @@ const WorkshopsDetail: React.FC<WorkshopsDetailProps> = ({ onClose }) => {
       description: 'Create colorful and durable jewelry using polymer clay techniques.',
       duration: '3 hours',
       level: 'Intermediate',
-      image: '/assets/polymer-clay-jewellery.webp',
+      image: '/assets/polymer-clay-jewellery (1).webp',
       category: 'Accessories',
       type: 'Public'
     },
