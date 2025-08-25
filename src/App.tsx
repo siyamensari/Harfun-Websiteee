@@ -560,7 +560,7 @@ function App() {
             </p>
 
             {/* Mission Statement */}
-            <div className="bg-gradient-to-br from-white/20 via-white/10 to-white/5 backdrop-blur-md rounded-3xl p-12 max-w-4xl mx-auto mb-12 border border-white/20">
+            <div className="bg-white/10 backdrop-blur-md rounded-3xl p-12 max-w-4xl mx-auto mb-12 border border-white/20">
               <h3 className="text-3xl font-bold text-white mb-6">Our Mission</h3>
               <p className="text-xl text-white/90 leading-relaxed mb-6">
                 "To create an inclusive artistic sanctuary where creativity knows no boundaries,
@@ -579,7 +579,7 @@ function App() {
                 { number: '4+', label: 'Years of Creativity' },
               ].map((stat, index) => (
                 <div key={index} className="text-center">
-                  <div className="text-4xl font-bold text-white mb-2 bg-gradient-to-br from-white/30 via-white/20 to-white/10 backdrop-blur-md rounded-2xl p-4 border border-white/20">{stat.number}</div>
+                  <div className="text-4xl font-bold text-white mb-2 bg-white/10 backdrop-blur-md rounded-2xl p-4 border border-white/20">{stat.number}</div>
                   <div className="text-white/70">{stat.label}</div>
                   </div>
                 ))}
