@@ -281,25 +281,25 @@ const AboutUsDetail: React.FC<AboutUsDetailProps> = ({ onClose }) => {
           {(() => {
             // Gallery images from public/gallery folder
             const galleryImages = [
-              '/gallery/_MG_1310.jpg',
-              '/gallery/_MG_1371.jpg',
-              '/gallery/_MG_1435.jpg',
-              '/gallery/_MG_1437.jpg',
-              '/gallery/_MG_1440.jpg',
-              '/gallery/_MG_2701.jpg',
-              '/gallery/_MG_4092.jpg',
-              '/gallery/_MG_4147.jpg',
-              '/gallery/_MG_4644.jpg',
-              '/gallery/_MG_5273.jpg',
-              '/gallery/_MG_5291.jpg',
-              '/gallery/_MG_5324.jpg',
-              '/gallery/_MG_6622.jpg',
-              '/gallery/_MG_6626.jpg',
-              '/gallery/_MG_6655.jpg',
-              '/gallery/_MG_6657.jpg',
-              '/gallery/_MG_6879.jpg',
-              '/gallery/_MG_7004.jpg',
-              '/gallery/_MG_7183.jpg'
+              '/gallery/_MG_1310.webp',
+              '/gallery/_MG_1371.webp',
+              '/gallery/_MG_1435.webp',
+              '/gallery/_MG_1437.webp',
+              '/gallery/_MG_1440.webp',
+              '/gallery/_MG_2701.webp',
+              '/gallery/_MG_4092.webp',
+              '/gallery/_MG_4147.webp',
+              '/gallery/_MG_4644.webp',
+              '/gallery/_MG_5273.webp',
+              '/gallery/_MG_5291.webp',
+              '/gallery/_MG_5324.webp',
+              '/gallery/_MG_6622.webp',
+              '/gallery/_MG_6626.webp',
+              '/gallery/_MG_6655.webp',
+              '/gallery/_MG_6657.webp',
+              '/gallery/_MG_6879.webp',
+              '/gallery/_MG_7004.webp',
+              '/gallery/_MG_7183.webp'
             ];
             
             // Memoize shuffled array to prevent re-shuffling on every render
