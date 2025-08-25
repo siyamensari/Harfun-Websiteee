@@ -63,7 +63,7 @@ function App() {
       description: 'Discover the ancient art of stained glass with modern techniques.',
       duration: '4 hours',
       level: 'Intermediate',
-      image: '/assets/crafted-with-passion.webp',
+      image: '/assets/stained-glass.webp',
     },
     {
       title: 'Leather Journal Making',
