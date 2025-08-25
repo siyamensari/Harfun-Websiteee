@@ -374,7 +374,7 @@ function App() {
                 },
               ].map((category, index) => (
                 <div key={index} className="text-center group">
-                  <div className="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-white/30 via-white/20 to-white/10 backdrop-blur-md rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-xl border border-white/20 group-hover:from-white/40 group-hover:via-white/30 group-hover:to-white/20">
+                  <div className="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-purple-500/60 via-blue-500/50 to-indigo-500/60 backdrop-blur-md rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-xl border border-white/20 group-hover:from-purple-500/80 group-hover:via-blue-500/70 group-hover:to-indigo-500/80">
                     {category.icon}
                   </div>
                   <h3 className="text-xl font-bold text-white mb-4">
@@ -515,7 +515,7 @@ function App() {
                   },
                 ].map((benefit, index) => (
                   <div key={index} className="text-center group">
-                  <div className="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-white/30 via-white/20 to-white/10 backdrop-blur-md rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-xl text-white border border-white/20 group-hover:from-white/40 group-hover:via-white/30 group-hover:to-white/20">
+                  <div className="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-emerald-500/60 via-teal-500/50 to-cyan-500/60 backdrop-blur-md rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-xl text-white border border-white/20 group-hover:from-emerald-500/80 group-hover:via-teal-500/70 group-hover:to-cyan-500/80">
                     {benefit.icon}
                     </div>
                     <h3 className="text-xl font-bold text-white mb-4">
