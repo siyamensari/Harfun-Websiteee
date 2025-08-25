@@ -277,7 +277,7 @@ const AboutUsDetail: React.FC<AboutUsDetailProps> = ({ onClose }) => {
         <p className="text-white/80 text-center mb-8 max-w-2xl mx-auto">
           Take a peek into our creative space and see the magic that happens at Harfun Studio
         </p>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {(() => {
             // Gallery images from public/gallery folder
             const galleryImages = [
@@ -314,22 +314,16 @@ const AboutUsDetail: React.FC<AboutUsDetailProps> = ({ onClose }) => {
             return imagesToShow.map((image, index) => (
               <div 
                 key={index} 
-                className="group relative overflow-hidden rounded-2xl bg-white/10 backdrop-blur-md hover:bg-white/20 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl"
-
+                className="group relative overflow-hidden rounded-xl bg-white/5 hover:bg-white/10 transition-colors duration-200"
               >
                 <div className="relative aspect-square overflow-hidden">
                   <img
                     src={image}
                     alt={`Studio Gallery Image ${index + 1}`}
                     loading="lazy"
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                    className="w-full h-full object-cover transition-transform duration-200 group-hover:scale-105"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                  <div className="absolute bottom-0 left-0 right-0 p-4 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-                    <p className="text-white text-sm font-medium text-center">
-                      Studio Activity
-                    </p>
-                  </div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-200"></div>
                 </div>
               </div>
             ));

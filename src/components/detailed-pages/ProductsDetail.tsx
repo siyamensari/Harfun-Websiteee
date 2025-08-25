@@ -103,35 +103,32 @@ const ProductsDetail: React.FC<ProductsDetailProps> = ({ onClose }) => {
         {allProducts.map((product, index) => (
           <div
             key={index}
-            className="group bg-gradient-to-br from-green-500/40 via-teal-500/40 to-blue-500/40 backdrop-blur-md rounded-2xl overflow-hidden hover:from-green-500/50 hover:via-teal-500/50 hover:to-blue-500/50 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl border border-white/20"
+            className="group bg-white/5 rounded-xl overflow-hidden hover:bg-white/10 transition-colors duration-200 shadow-lg"
           >
             <div className="relative overflow-hidden">
               <img
                 src={product.image}
                 alt={product.title}
                 loading="lazy"
-                className="w-full h-48 object-cover rounded-t-2xl group-hover:scale-110 transition-transform duration-500"
+                className="w-full h-48 object-cover rounded-t-xl transition-transform duration-200 group-hover:scale-105"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
-
-
+              <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
             </div>
-            <div className="p-6">
-              <h3 className="text-xl font-bold text-white mb-3">
-                {product.title}
-              </h3>
-              <p className="text-white/80 mb-4 leading-relaxed">
-                {product.description}
-              </p>
-              <div className="space-y-2 mb-4">
-                {product.features.map((feature, idx) => (
-                  <div key={idx} className="flex items-center">
-                    <div className="w-2 h-2 bg-gradient-to-r from-green-400 to-blue-500 rounded-full mr-3"></div>
-                    <span className="text-white/70 text-sm">{feature}</span>
-                  </div>
-                ))}
+            <div className="p-4">
+              <h3 className="text-lg font-bold text-white mb-2">{product.title}</h3>
+              <p className="text-white/80 mb-3 text-sm leading-relaxed">{product.description}</p>
+              <div className="flex items-center justify-between mb-3">
+                <span className="text-yellow-400 font-semibold">{product.price}</span>
+                <span className="bg-white/20 text-white text-xs px-2 py-1 rounded-full">{product.category}</span>
               </div>
-
+              <ul className="space-y-1">
+                {product.features.map((feature, featureIndex) => (
+                  <li key={featureIndex} className="text-white/70 text-xs flex items-center">
+                    <span className="w-1.5 h-1.5 bg-white rounded-full mr-2"></span>
+                    {feature}
+                  </li>
+                ))}
+              </ul>
             </div>
           </div>
         ))}

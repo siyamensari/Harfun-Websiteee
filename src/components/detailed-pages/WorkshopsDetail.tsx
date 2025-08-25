@@ -344,17 +344,17 @@ const WorkshopsDetail: React.FC<WorkshopsDetailProps> = ({ onClose }) => {
         <h2 className={`text-3xl font-bold text-white mb-8 text-center transition-all duration-500 transform ${
           isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
         }`}>Workshop Types</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
           {workshopTypes.map((type, index) => (
             <div
               key={index}
-              className={`bg-gradient-to-br from-blue-500/40 via-purple-500/40 to-pink-500/40 backdrop-blur-md rounded-2xl p-6 text-white hover:scale-105 transition-all duration-500 transform shadow-xl border border-white/20 hover:from-blue-500/50 hover:via-purple-500/50 hover:to-pink-500/50 ${
+              className={`bg-gradient-to-br from-blue-500/30 via-purple-500/30 to-pink-500/30 rounded-xl p-4 text-white hover:scale-105 transition-transform duration-200 shadow-lg border border-white/20 hover:from-blue-500/40 hover:via-purple-500/40 hover:to-pink-500/40 ${
                 isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
               }`}
             >
-                              <div className="text-4xl mb-4 text-center bg-gradient-to-br from-blue-500/60 to-purple-500/60 backdrop-blur-md rounded-full w-16 h-16 mx-auto flex items-center justify-center border border-white/20">{type.icon}</div>
-              <h3 className="text-xl font-bold mb-3 text-center">{type.title}</h3>
-              <p className="text-white/90 text-sm mb-4 leading-relaxed">{type.description}</p>
+              <div className="text-3xl mb-3 text-center bg-gradient-to-br from-blue-500/50 to-purple-500/50 rounded-full w-14 h-14 mx-auto flex items-center justify-center border border-white/20">{type.icon}</div>
+              <h3 className="text-lg font-bold mb-2 text-center">{type.title}</h3>
+              <p className="text-white/90 text-sm mb-3 leading-relaxed">{type.description}</p>
               <ul className="space-y-1">
                 {type.features.map((feature, featureIndex) => (
                   <li key={featureIndex} className="text-white/80 text-xs flex items-center">
@@ -377,23 +377,22 @@ const WorkshopsDetail: React.FC<WorkshopsDetailProps> = ({ onClose }) => {
         {allWorkshops.map((workshop, index) => (
           <div
             key={index}
-            className="group bg-white/10 backdrop-blur-md rounded-2xl overflow-hidden hover:bg-white/20 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl"
+            className="group bg-white/5 rounded-xl overflow-hidden hover:bg-white/10 transition-colors duration-200"
           >
             <div className="relative overflow-hidden">
               <img
                 src={workshop.image}
                 alt={workshop.title}
                 loading="lazy"
-                className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"
+                className="w-full h-48 object-cover transition-transform duration-200 group-hover:scale-105"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
-
+              <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
             </div>
-            <div className="p-6">
-              <h4 className="text-xl font-bold text-white mb-3">
+            <div className="p-4">
+              <h4 className="text-lg font-bold text-white mb-2">
                 {workshop.title}
               </h4>
-              <p className="text-white/80 mb-4 leading-relaxed">
+              <p className="text-white/80 mb-3 leading-relaxed text-sm">
                 {workshop.description}
               </p>
               <div className="flex items-center justify-between">
@@ -403,7 +402,7 @@ const WorkshopsDetail: React.FC<WorkshopsDetailProps> = ({ onClose }) => {
                   </svg>
                   <span className="text-sm">{workshop.duration}</span>
                 </div>
-                <span className="bg-white/20 text-white text-xs px-3 py-1 rounded-full">
+                <span className="bg-white/20 text-white text-xs px-2 py-1 rounded-full">
                   {workshop.level}
                 </span>
               </div>

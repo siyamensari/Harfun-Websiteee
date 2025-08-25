@@ -282,38 +282,34 @@ function App() {
               {popularWorkshops.map((workshop, index) => (
                 <div
                   key={index}
-                  className="group bg-gradient-to-br from-white/20 via-white/10 to-white/5 backdrop-blur-md rounded-2xl overflow-hidden hover:from-white/30 hover:via-white/20 hover:to-white/10 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl border border-white/20"
+                  className="group bg-white/5 backdrop-blur-sm rounded-xl overflow-hidden hover:bg-white/10 transition-colors duration-200 hover:shadow-lg"
                 >
-                    <div className="relative overflow-hidden">
-                      <img
-                        src={workshop.image}
-                        alt={workshop.title}
-                        loading="lazy"
-                        className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
-                    </div>
-                    <div className="p-6">
-                      <h4 className="text-xl font-bold text-white mb-3">
-                        {workshop.title}
-                      </h4>
-                      <p className="text-white/80 mb-4 leading-relaxed">
-                        {workshop.description}
-                      </p>
-                      <div className="flex items-center justify-between">
+                  <div className="relative overflow-hidden">
+                    <img
+                      src={workshop.image}
+                      alt={workshop.title}
+                      loading="lazy"
+                      className="w-full h-48 object-cover transition-transform duration-200 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+                  </div>
+                  <div className="p-4">
+                    <h3 className="text-lg font-bold text-white mb-2">{workshop.title}</h3>
+                    <p className="text-white/80 mb-3 text-sm leading-relaxed">{workshop.description}</p>
+                    <div className="flex items-center justify-between">
                       <div className="flex items-center text-white">
-                          <svg className="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                          </svg>
-                          <span className="text-sm">{workshop.duration}</span>
-                        </div>
-                        <span className="bg-white/20 text-white text-xs px-3 py-1 rounded-full">
-                        {workshop.level}
-                        </span>
+                        <svg className="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        <span className="text-sm">{workshop.duration}</span>
                       </div>
+                      <span className="bg-white/20 text-white text-xs px-2 py-1 rounded-full">
+                        {workshop.level}
+                      </span>
                     </div>
                   </div>
-                ))}
+                </div>
+              ))}
             </div>
 
             {/* See More Button */}
