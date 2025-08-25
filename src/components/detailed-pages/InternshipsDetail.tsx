@@ -1,10 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-interface InternshipsDetailProps {
-  onClose: () => void;
-}
-
-const InternshipsDetail: React.FC<InternshipsDetailProps> = ({ onClose }) => {
+const InternshipsDetail: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {

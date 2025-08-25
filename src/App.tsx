@@ -922,23 +922,23 @@ function App() {
 
       {/* Modal Components */}
       <Modal isOpen={showWorkshopsDetail} onClose={() => setShowWorkshopsDetail(false)}>
-        <WorkshopsDetail onClose={() => setShowWorkshopsDetail(false)} />
+        <WorkshopsDetail />
       </Modal>
 
       <Modal isOpen={showCommissionsDetail} onClose={() => setShowCommissionsDetail(false)}>
-        <CommissionsDetail onClose={() => setShowCommissionsDetail(false)} />
+        <CommissionsDetail />
       </Modal>
 
       <Modal isOpen={showProductsDetail} onClose={() => setShowProductsDetail(false)}>
-        <ProductsDetail onClose={() => setShowProductsDetail(false)} />
+        <ProductsDetail />
       </Modal>
 
       <Modal isOpen={showInternshipsDetail} onClose={() => setShowInternshipsDetail(false)}>
-        <InternshipsDetail onClose={() => setShowInternshipsDetail(false)} />
+        <InternshipsDetail />
       </Modal>
 
       <Modal isOpen={showAboutUsDetail} onClose={() => setShowAboutUsDetail(false)}>
-        <AboutUsDetail onClose={() => setShowAboutUsDetail(false)} />
+        <AboutUsDetail />
       </Modal>
 
 

@@ -1,10 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-interface CommissionsDetailProps {
-  onClose: () => void;
-}
-
-const CommissionsDetail: React.FC<CommissionsDetailProps> = ({ onClose }) => {
+const CommissionsDetail: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {

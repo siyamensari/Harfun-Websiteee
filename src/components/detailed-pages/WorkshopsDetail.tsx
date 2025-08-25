@@ -1,10 +1,6 @@
 import React, { useState, useEffect, useMemo, useCallback } from 'react';
 
-interface WorkshopsDetailProps {
-  onClose: () => void;
-}
-
-const WorkshopsDetail: React.FC<WorkshopsDetailProps> = React.memo(({ onClose }) => {
+const WorkshopsDetail: React.FC = React.memo(() => {
   const [isVisible, setIsVisible] = useState(false);
   const [visibleCount, setVisibleCount] = useState(12); // Show only 12 initially
 

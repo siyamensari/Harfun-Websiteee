@@ -1,10 +1,6 @@
 import React, { useMemo } from 'react';
 
-interface ProductsDetailProps {
-  onClose: () => void;
-}
-
-const ProductsDetail: React.FC<ProductsDetailProps> = React.memo(({ onClose }) => {
+const ProductsDetail: React.FC = React.memo(() => {
   // Memoize products data to prevent re-creation
   const products = useMemo(() => [
     {

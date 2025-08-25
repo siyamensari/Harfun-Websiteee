@@ -1,10 +1,6 @@
 import React, { useState, useEffect, useMemo } from 'react';
 
-interface AboutUsDetailProps {
-  onClose: () => void;
-}
-
-const AboutUsDetail: React.FC<AboutUsDetailProps> = React.memo(({ onClose }) => {
+const AboutUsDetail: React.FC = React.memo(() => {
   const [isVisible, setIsVisible] = useState(false);
   const [showFullGallery, setShowFullGallery] = useState(false);
   const [visibleGalleryCount, setVisibleGalleryCount] = useState(9); // Show only 9 initially
