@@ -168,43 +168,43 @@ function App() {
                   id: 'workshops',
                   title: 'Workshops',
                   description: 'Creative sessions for all skill levels',
-                  color: 'from-red-500 to-pink-500',
+                  color: 'from-white/40 to-white/20',
                 },
                 {
                   id: 'commissions',
                   title: 'Commissions',
                   description: 'Custom artwork for your space',
-                  color: 'from-orange-500 to-amber-500',
+                  color: 'from-white/40 to-white/20',
                 },
                 {
                   id: 'products',
                   title: 'Products',
                   description: 'Handcrafted items made with love',
-                  color: 'from-emerald-500 to-teal-500',
+                  color: 'from-white/40 to-white/20',
                 },
                 {
                   id: 'internship',
                   title: 'Internship',
                   description: 'Learn and grow with our team',
-                  color: 'from-blue-500 to-indigo-500',
+                  color: 'from-white/40 to-white/20',
                 },
                 {
                   id: 'about',
                   title: 'About Us',
                   description: 'Our story, values, and team',
-                  color: 'from-purple-500 to-violet-500',
+                  color: 'from-white/40 to-white/20',
                 },
                 {
                   id: 'contact',
                   title: 'Contact',
                   description: 'Get in touch with us',
-                  color: 'from-rose-500 to-red-500',
+                  color: 'from-white/40 to-white/20',
                 },
               ].map((link) => (
                 <div
                   key={link.id}
                   onClick={() => document.getElementById(link.id)?.scrollIntoView({ behavior: 'smooth' })}
-                  className="group bg-white/30 backdrop-blur-md rounded-2xl p-8 cursor-pointer hover:bg-white/40 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl"
+                  className="group bg-white/15 backdrop-blur-md rounded-2xl p-8 cursor-pointer hover:bg-white/25 transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl"
                 >
                   <div className={`w-16 h-16 bg-gradient-to-br ${link.color} rounded-xl flex items-center justify-center mb-6`}>
                     <img 
