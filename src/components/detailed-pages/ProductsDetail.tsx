@@ -17,7 +17,7 @@ const ProductsDetail: React.FC<ProductsDetailProps> = ({ onClose }) => {
       description: 'Beautiful, aromatic candles made with natural waxes and essential oils. Perfect for creating a cozy atmosphere.',
       price: 'Rs. 800 - 1,500',
       category: 'Aromatherapy',
-      image: '/assets/candle-making.jpg',
+      image: '/assets/candle-making.webp',
       features: ['Natural wax', 'Essential oils', 'Long burning', 'Eco-friendly']
     },
     {
@@ -25,7 +25,7 @@ const ProductsDetail: React.FC<ProductsDetailProps> = ({ onClose }) => {
       description: 'Premium leather-bound journals with hand-stitched binding. Ideal for writing, sketching, or as thoughtful gifts.',
       price: 'Rs. 1,200 - 2,500',
       category: 'Stationery',
-      image: '/assets/leather-journal-making.jpeg',
+      image: '/assets/leather-journal-making.webp',
       features: ['Genuine leather', 'Hand-stitched', 'Quality paper', 'Personalized']
     },
     {
@@ -33,7 +33,7 @@ const ProductsDetail: React.FC<ProductsDetailProps> = ({ onClose }) => {
       description: 'Unique ceramic pieces including vases, bowls, and decorative items. Each piece is handcrafted and one-of-a-kind.',
       price: 'Rs. 1,500 - 3,000',
       category: 'Home Decor',
-      image: '/assets/create-with-clay.jpg',
+      image: '/assets/create-with-clay.webp',
       features: ['Hand-thrown', 'Unique designs', 'Food safe', 'Microwave safe']
     },
     {
@@ -41,7 +41,7 @@ const ProductsDetail: React.FC<ProductsDetailProps> = ({ onClose }) => {
       description: 'Handwoven textiles, embroidered pieces, and fabric art. Perfect for adding texture and color to your space.',
       price: 'Rs. 2,000 - 4,500',
       category: 'Gifts & Accessories',
-      image: '/assets/batik.jpg',
+      image: '/assets/batik.webp',
       features: ['Handwoven', 'Natural fibers', 'Traditional techniques', 'Washable']
     },
     {
@@ -49,7 +49,7 @@ const ProductsDetail: React.FC<ProductsDetailProps> = ({ onClose }) => {
       description: 'Hand-carved wooden items including decorative pieces, functional objects, and artistic sculptures.',
       price: 'Rs. 1,800 - 3,500',
       category: 'Home Decor',
-      image: '/assets/wood-working.jpg',
+      image: '/assets/wood-working.webp',
       features: ['Sustainable wood', 'Hand-carved', 'Natural finish', 'Durable']
     },
     {
@@ -57,7 +57,7 @@ const ProductsDetail: React.FC<ProductsDetailProps> = ({ onClose }) => {
       description: 'Unique metal artworks including wall pieces, sculptures, and functional items. Created using traditional techniques.',
       price: 'Rs. 2,500 - 5,000',
       category: 'Gifts & Accessories',
-      image: '/assets/aluminium-art.jpg',
+      image: '/assets/aluminium-art.webp',
       features: ['Hand-forged', 'Unique designs', 'Weather resistant', 'Long-lasting']
     },
     {
@@ -73,7 +73,7 @@ const ProductsDetail: React.FC<ProductsDetailProps> = ({ onClose }) => {
       description: 'Handmade paper products including cards, origami, and decorative paper art. Perfect for special occasions.',
       price: 'Rs. 500 - 1,200',
       category: 'Stationery',
-      image: '/assets/decoupage.jpg',
+      image: '/assets/decoupage.webp',
       features: ['Recycled paper', 'Handmade', 'Eco-friendly', 'Affordable']
     }
   ];

@@ -64,7 +64,7 @@ const WorkshopsDetail: React.FC<WorkshopsDetailProps> = ({ onClose }) => {
       description: 'Shape your imagination with our hands-on sculpting & pottery sessions.',
       duration: '3 hours',
       level: 'Beginner',
-      image: '/assets/create-with-clay.jpg',
+      image: '/assets/create-with-clay.webp',
       category: 'Traditional Crafts',
       type: 'Public'
     },
@@ -73,7 +73,7 @@ const WorkshopsDetail: React.FC<WorkshopsDetailProps> = ({ onClose }) => {
       description: 'Create beautiful, aromatic candles with professional techniques.',
       duration: '2.5 hours',
       level: 'Beginner',
-      image: '/assets/candle-making.jpg',
+      image: '/assets/candle-making.webp',
       category: 'Home & Lifestyle',
       type: 'Public'
     },
@@ -91,7 +91,7 @@ const WorkshopsDetail: React.FC<WorkshopsDetailProps> = ({ onClose }) => {
       description: 'Craft beautiful, durable journals using traditional techniques.',
       duration: '3.5 hours',
       level: 'Intermediate',
-      image: '/assets/leather-journal-making.jpeg',
+      image: '/assets/leather-journal-making.webp',
       category: 'Stationery',
       type: 'Public'
     },
@@ -100,7 +100,7 @@ const WorkshopsDetail: React.FC<WorkshopsDetailProps> = ({ onClose }) => {
       description: 'Explore vibrant acrylic painting techniques and methods.',
       duration: '3 hours',
       level: 'Beginner',
-      image: '/assets/acrylic-painting.jpg',
+      image: '/assets/acrylic-painting.webp',
       category: 'Painting',
       type: 'Public'
     },
@@ -109,7 +109,7 @@ const WorkshopsDetail: React.FC<WorkshopsDetailProps> = ({ onClose }) => {
       description: 'Learn Pakistani truck decoration with traditional motifs.',
       duration: '4 hours',
       level: 'Advanced',
-      image: '/assets/truck-art.heic',
+      image: '/assets/truck-art.webp',
       category: 'Traditional Art',
       type: 'Public'
     },
@@ -127,7 +127,7 @@ const WorkshopsDetail: React.FC<WorkshopsDetailProps> = ({ onClose }) => {
       description: 'Create three-dimensional artworks using wire and mixed media techniques.',
       duration: '4 hours',
       level: 'All Levels',
-      image: '/assets/wire-sculpting.jpg',
+      image: '/assets/wire-sculpting.webp',
       category: '3D Art',
       type: 'Public'
     },
@@ -136,7 +136,7 @@ const WorkshopsDetail: React.FC<WorkshopsDetailProps> = ({ onClose }) => {
       description: 'Learn traditional and modern textile techniques including dyeing and fabric art.',
       duration: '3.5 hours',
       level: 'Beginner+',
-      image: '/assets/batik.jpg',
+      image: '/assets/batik.webp',
       category: 'Fiber Arts',
       type: 'Public'
     },
@@ -145,7 +145,7 @@ const WorkshopsDetail: React.FC<WorkshopsDetailProps> = ({ onClose }) => {
       description: 'Discover various printmaking techniques including linocut, screen printing, and etching.',
       duration: '3 hours',
       level: 'Intermediate',
-      image: '/assets/print-making.jpg',
+      image: '/assets/print-making.webp',
       category: 'Printmaking',
       type: 'Public'
     },
@@ -154,7 +154,7 @@ const WorkshopsDetail: React.FC<WorkshopsDetailProps> = ({ onClose }) => {
       description: 'Transform ordinary pots into beautiful works of art with creative painting techniques.',
       duration: '2 hours',
       level: 'Beginner',
-      image: '/assets/pot-painting.jpg',
+      image: '/assets/pot-painting.webp',
       category: 'Home Decor',
       type: 'Public'
     },
@@ -163,7 +163,7 @@ const WorkshopsDetail: React.FC<WorkshopsDetailProps> = ({ onClose }) => {
       description: 'Create stunning jewelry pieces using various materials and techniques.',
       duration: '3.5 hours',
       level: 'Intermediate',
-      image: '/assets/jewellery-making.jpeg',
+      image: '/assets/jewellery-making.webp',
       category: 'Accessories',
       type: 'Private'
     },
@@ -172,7 +172,7 @@ const WorkshopsDetail: React.FC<WorkshopsDetailProps> = ({ onClose }) => {
       description: 'Learn metalworking techniques to create unique jewelry pieces.',
       duration: '4 hours',
       level: 'Advanced',
-      image: '/assets/metal-jewellery.jpeg',
+      image: '/assets/metal-jewellery.webp',
       category: 'Accessories',
       type: 'Private'
     },
@@ -181,7 +181,7 @@ const WorkshopsDetail: React.FC<WorkshopsDetailProps> = ({ onClose }) => {
       description: 'Create beautiful fabric-based jewelry using traditional and modern techniques.',
       duration: '2.5 hours',
       level: 'Beginner',
-      image: '/assets/fabric-jewellery.avif',
+      image: '/assets/fabric-jewellery.webp',
       category: 'Accessories',
       type: 'Public'
     },
@@ -190,7 +190,7 @@ const WorkshopsDetail: React.FC<WorkshopsDetailProps> = ({ onClose }) => {
       description: 'Learn cross-stitch techniques to create unique jewelry pieces.',
       duration: '3 hours',
       level: 'Beginner+',
-      image: '/assets/Cross-stitch-jewelry-tutorial.jpeg',
+      image: '/assets/Cross-stitch-jewelry-tutorial.webp',
       category: 'Accessories',
       type: 'Public'
     },
@@ -208,7 +208,7 @@ const WorkshopsDetail: React.FC<WorkshopsDetailProps> = ({ onClose }) => {
       description: 'Design and create unique masks using various materials and techniques.',
       duration: '4 hours',
       level: 'All Levels',
-      image: '/assets/mask-making.jpg',
+      image: '/assets/mask-making.webp',
       category: 'Costume Art',
       type: 'Public'
     },
@@ -217,7 +217,7 @@ const WorkshopsDetail: React.FC<WorkshopsDetailProps> = ({ onClose }) => {
       description: 'Create beautiful artworks using thread and nails on canvas.',
       duration: '3.5 hours',
       level: 'Intermediate',
-      image: '/assets/thread-art.jpg',
+      image: '/assets/thread-art.webp',
       category: 'Textile Art',
       type: 'Public'
     },
@@ -226,7 +226,7 @@ const WorkshopsDetail: React.FC<WorkshopsDetailProps> = ({ onClose }) => {
       description: 'Design and assemble functional clocks with artistic elements.',
       duration: '4 hours',
       level: 'Intermediate+',
-      image: '/assets/clock-making.jpg',
+      image: '/assets/clock-making.webp',
       category: 'Home Decor',
       type: 'Private'
     },
@@ -235,7 +235,7 @@ const WorkshopsDetail: React.FC<WorkshopsDetailProps> = ({ onClose }) => {
       description: 'Create unique lamps with artistic designs and functional lighting.',
       duration: '4.5 hours',
       level: 'Advanced',
-      image: '/assets/lamp-making.jpg',
+      image: '/assets/lamp-making.webp',
       category: 'Home Decor',
       type: 'Private'
     },
@@ -244,7 +244,7 @@ const WorkshopsDetail: React.FC<WorkshopsDetailProps> = ({ onClose }) => {
       description: 'Explore the fascinating world of resin art with various techniques.',
       duration: '3 hours',
       level: 'Intermediate',
-      image: '/assets/resin-art.jpg',
+      image: '/assets/resin-art.webp',
       category: 'Mixed Media',
       type: 'Public'
     },
@@ -253,7 +253,7 @@ const WorkshopsDetail: React.FC<WorkshopsDetailProps> = ({ onClose }) => {
       description: 'Create miniature ecosystems in beautiful glass containers.',
       duration: '2.5 hours',
       level: 'Beginner',
-      image: '/assets/terrarium.jpg',
+      image: '/assets/terrarium.webp',
       category: 'Nature Art',
       type: 'Public'
     },
@@ -262,7 +262,7 @@ const WorkshopsDetail: React.FC<WorkshopsDetailProps> = ({ onClose }) => {
       description: 'Learn traditional woodworking techniques to create beautiful furniture and decorative pieces.',
       duration: '4 hours',
       level: 'Intermediate',
-      image: '/assets/wood-working.jpg',
+      image: '/assets/wood-working.webp',
       category: 'Woodcraft',
       type: 'Public'
     },
@@ -271,7 +271,7 @@ const WorkshopsDetail: React.FC<WorkshopsDetailProps> = ({ onClose }) => {
       description: 'Transform mirrors into artistic pieces with creative painting techniques.',
       duration: '3 hours',
       level: 'Intermediate',
-      image: '/assets/mirror-painting.jpg',
+      image: '/assets/mirror-painting.webp',
       category: 'Home Decor',
       type: 'Private'
     },
@@ -280,7 +280,7 @@ const WorkshopsDetail: React.FC<WorkshopsDetailProps> = ({ onClose }) => {
       description: 'Learn the ancient art of bonsai tree cultivation and styling.',
       duration: '5 hours',
       level: 'Advanced',
-      image: '/assets/bonsai-art.jpg',
+      image: '/assets/bonsai-art.webp',
       category: 'Nature Art',
       type: 'Private'
     },
@@ -289,7 +289,7 @@ const WorkshopsDetail: React.FC<WorkshopsDetailProps> = ({ onClose }) => {
       description: 'Create unique artworks using aluminium and metalworking techniques.',
       duration: '4 hours',
       level: 'Advanced',
-      image: '/assets/aluminium-art.jpg',
+      image: '/assets/aluminium-art.webp',
       category: 'Metalwork',
       type: 'Public'
     },
@@ -298,7 +298,7 @@ const WorkshopsDetail: React.FC<WorkshopsDetailProps> = ({ onClose }) => {
       description: 'Learn to create beautiful garden designs and landscape art.',
       duration: '3 hours',
       level: 'Beginner',
-      image: '/assets/gardening.jpg',
+      image: '/assets/gardening.webp',
       category: 'Nature Art',
       type: 'Public'
     },
@@ -307,7 +307,7 @@ const WorkshopsDetail: React.FC<WorkshopsDetailProps> = ({ onClose }) => {
       description: 'Learn the beautiful art of decoupage to transform everyday objects into works of art.',
       duration: '2.5 hours',
       level: 'Beginner',
-      image: '/assets/decoupage.jpg',
+      image: '/assets/decoupage.webp',
       category: 'Paper Crafts',
       type: 'Public'
     },
@@ -316,7 +316,7 @@ const WorkshopsDetail: React.FC<WorkshopsDetailProps> = ({ onClose }) => {
       description: 'Create unique artworks using the traditional Plasta Costa technique.',
       duration: '3.5 hours',
       level: 'Intermediate',
-      image: '/assets/plasta-costa.jpg',
+      image: '/assets/plasta-costa.webp',
       category: 'Mixed Media',
       type: 'Public'
     },

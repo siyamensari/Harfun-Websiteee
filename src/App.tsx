@@ -49,14 +49,14 @@ function App() {
       description: 'Shape your imagination with our hands-on sculpting & pottery sessions.',
       duration: '3 hours',
       level: 'Beginner',
-      image: '/assets/create-with-clay.jpg',
+      image: '/assets/create-with-clay.webp',
     },
     {
       title: 'Candle Making',
       description: 'Create beautiful, aromatic candles with professional techniques.',
       duration: '2.5 hours',
       level: 'Beginner',
-      image: '/assets/candle-making.jpg',
+      image: '/assets/candle-making.webp',
     },
     {
       title: 'Stained Glass Art',
@@ -70,21 +70,21 @@ function App() {
       description: 'Craft beautiful, durable journals using traditional techniques.',
       duration: '3.5 hours',
       level: 'Intermediate',
-      image: '/assets/leather-journal-making.jpeg',
+      image: '/assets/leather-journal-making.webp',
     },
     {
       title: 'Acrylic Painting',
       description: 'Explore vibrant acrylic painting techniques and methods.',
       duration: '3 hours',
       level: 'Beginner',
-      image: '/assets/acrylic-painting.jpg',
+      image: '/assets/acrylic-painting.webp',
     },
     {
       title: 'Truck Art',
       description: 'Learn Pakistani truck decoration with traditional motifs.',
       duration: '4 hours',
       level: 'Advanced',
-      image: '/assets/truck-art.heic',
+      image: '/assets/truck-art.webp',
     },
   ];
 

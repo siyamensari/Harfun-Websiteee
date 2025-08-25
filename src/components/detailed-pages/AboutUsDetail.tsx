@@ -137,19 +137,19 @@ const AboutUsDetail: React.FC<AboutUsDetailProps> = ({ onClose }) => {
       name: 'Abdullah Javed',
       role: 'Co-CEO & Sculptor',
       description: 'Visionary sculptor and co-founder with 15+ years in art therapy and creative workshops. Passionate about making art accessible to everyone.',
-      image: '/assets/abdullah.jpg'
+      image: '/assets/abdullah.webp'
     },
     {
       name: 'Arsalan Khan',
       role: 'Co-CEO & Sculptor',
       description: 'Creative sculptor and co-founder ensuring sustainable growth while maintaining our artistic integrity. Expert in traditional and modern techniques.',
-      image: '/assets/arsalan.jpg'
+      image: '/assets/arsalan.webp'
     },
     {
       name: 'Sana Fatima',
       role: 'Operations Manager & Designer',
       description: 'Creative coordinator who brings workshops to life and manages our vibrant community. Expert in textile arts and workshop coordination.',
-      image: '/assets/sana.jpg'
+      image: '/assets/sana.webp'
     }
   ];
 
