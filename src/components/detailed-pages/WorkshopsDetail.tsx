@@ -82,7 +82,7 @@ const WorkshopsDetail: React.FC<WorkshopsDetailProps> = ({ onClose }) => {
       description: 'Discover the ancient art of stained glass with modern techniques.',
       duration: '4 hours',
       level: 'Intermediate',
-      image: '/assets/crafted-with-passion.webp',
+      image: '/assets/stained-glass.webp',
       category: 'Glass Art',
       type: 'Public'
     },
@@ -118,7 +118,7 @@ const WorkshopsDetail: React.FC<WorkshopsDetailProps> = ({ onClose }) => {
       description: 'Master the delicate art of watercolor with techniques for landscapes, portraits, and abstract art.',
       duration: '2.5 hours',
       level: 'Beginner+',
-      image: '/assets/watercolour-painting.avif',
+      image: '/assets/watercolour-painting.webp',
       category: 'Painting',
       type: 'Public'
     },
