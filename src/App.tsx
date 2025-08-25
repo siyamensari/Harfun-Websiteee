@@ -168,37 +168,37 @@ function App() {
                   id: 'workshops',
                   title: 'Workshops',
                   description: 'Creative sessions for all skill levels',
-                  color: 'from-pink-500 to-red-500',
+                  color: 'from-red-400/80 to-pink-400/70',
                 },
                 {
                   id: 'commissions',
                   title: 'Commissions',
                   description: 'Custom artwork for your space',
-                  color: 'from-yellow-500 to-orange-500',
+                  color: 'from-orange-400/80 to-amber-400/70',
                 },
                 {
                   id: 'products',
                   title: 'Products',
                   description: 'Handcrafted items made with love',
-                  color: 'from-green-500 to-teal-500',
+                  color: 'from-emerald-400/80 to-teal-400/70',
                 },
                 {
                   id: 'internship',
                   title: 'Internship',
                   description: 'Learn and grow with our team',
-                  color: 'from-blue-500 to-indigo-500',
+                  color: 'from-blue-400/80 to-indigo-400/70',
                 },
                 {
                   id: 'about',
                   title: 'About Us',
                   description: 'Our story, values, and team',
-                  color: 'from-purple-500 to-pink-500',
+                  color: 'from-purple-400/80 to-violet-400/70',
                 },
                 {
                   id: 'contact',
                   title: 'Contact',
                   description: 'Get in touch with us',
-                  color: 'from-red-500 to-blue-500',
+                  color: 'from-rose-400/80 to-red-400/70',
                 },
               ].map((link) => (
                 <div
